@@ -1,10 +1,12 @@
-use expense_tracker:: {
-    types::{ExpenseCategory, UserSession, TAX_RATE, MAX_DAILY_EXPENSES},
-    expense::{create_expense, create_expense_from_tuple, process_expense, categorize_expense_amount},
-    calculator::{calculate_tax, WeeklySummary},
-    display::*,
+use expense_tracker::{
+    ExpenseCategory, UserSession, TAX_RATE, MAX_DAILY_EXPENSES,
+    create_expense, create_expense_from_tuple, process_expenses, categorize_expense_amount,
+    calculate_tax, WeeklySummary,
+    print_header, print_session_info, print_expense_details, print_string_examples,
+    print_running_totals, print_budget_tracking, print_weekly_summary, 
+    print_final_summary, print_type_examples
 };
-use personal_expense_tracker::{display::{print_budget_tracking, print_final_summary, print_session_info}, expense::{self, create_expense_from_tuple}, types::UserSession, WeeklySummary};
+
 
 fn main() {
     print_header();
@@ -52,7 +54,7 @@ fn main() {
     full_description.push_str("grocery shoppping at");
     full_description.push_str(store_name);
 
-    print_strig_examples(store_name, receipt_notes);
+    print_string_examples(store_name, &receipt_notes);
     println!("   Full description: {}", full_description);
 
     let base_amount = 500.0;

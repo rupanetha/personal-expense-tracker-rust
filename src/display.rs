@@ -31,7 +31,7 @@ pub fn print_expense_details(expense: &ExpenseData, index: usize) {
     }
 }
 
-pub fn print_strig_examples(store_name: &str, receipt_notes: &str) {
+pub fn print_string_examples(store_name: &str, receipt_notes: &str) {
     println!("\n🧾 Receipt details:");
     println!("   Store: {}", store_name);
     println!("   Notes: {}", receipt_notes);

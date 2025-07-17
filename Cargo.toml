@@ -3,4 +3,12 @@ name = "personal-expense-tracker"
 version = "0.1.0"
 edition = "2024"
 
+[[bin]]
+name = "expense_tracker"
+path = "src/main.rs"
+
+[lib]
+name = "expense_tracker"
+path = "src/lib.rs"
+
 [dependencies]

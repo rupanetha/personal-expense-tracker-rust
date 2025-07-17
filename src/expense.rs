@@ -22,6 +22,11 @@ pub fn create_expense_from_tuple(data: (f64, &str, char)) -> Option<ExpenseData>
     })
 }
 
+pub fn process_expenses(expenses: &[ExpenseData]) -> (f64, usize) {
+    let total_amount: f64 = expenses.iter().map(|e| e.amount).sum();
+    let count = expenses.len();
+    (total_amount, count)
+}
 
 pub fn categorize_expense_amount(amount: f64) -> &'static str {
     match amount {
